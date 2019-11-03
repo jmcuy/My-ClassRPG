@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Guild Mission</title>
+</head>
+
+<body>
+    <button><a href="home.html">Home</a></button>
+    <button><a href="profile.html">My Profile</a></button>
+    <button><a href="login.html">Sign Out</a></button> <br><br>
+
+    <h2>Guild Mission (Course Code)</h2>
+
+    <h3>Current Level</h3>
+    Current XP:
+    <h4>Quizzes</h4>
+    <button onclick="viewMission()">Quiz #1</button>
+    <div id="view-mission">
+        Date: <br>
+        Topic: <br>
+        Subtopic 1 <input type="text" disabled value="My XP"></input> <br>
+        Subtopic 2 <input type="text" disabled value="My XP"></input> <br>
+        Subtopic 3 <input type="text" disabled value="My XP"></input> <br>
+
+        XP Gained: <br>
+        Topic Total XP: <br> <br>
+
+    </div>
+
+    <h4>Lab Activities</h4>
+
+    <h4>Exams</h4>
+
+    <script>
+        document.getElementById("view-mission").style.display = "none";
+
+        function viewMission() {
+            var x = document.getElementById("view-mission");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

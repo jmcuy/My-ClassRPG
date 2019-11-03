@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Login</title>
+</head>
+
+<body>
+    <h1>
+        Welcome to ClassRPG!
+    </h1>
+
+    <button><a href=home-student.html>Sign in as a Student</a></button><br><br>
+    <button><a href=home-teacher.html>Sign in as a Teacher</a></button><br><br>
+
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+
+    <script>
+        var config = {
+            apiKey: "AIzaSyCRNtGaHVfkfU6JwZj9BBSYfUpSXRJ0lIk",
+            authDomain: "classrpg-2ac09.firebaseapp.com",
+            databaseURL: "https://classrpg-2ac09.firebaseio.com",
+            projectId: "classrpg-2ac09",
+            storageBucket: "",
+            messagingSenderId: "265529658530",
+            appId: "1:265529658530:web:213f9c11a2a57002"
+        };
+        firebase.initializeApp(config);
+
+        googleSignIn=()=>{
+            base_provider = new firebase.auth.GoogleAuthProvider()
+            firebase.auth().signInWithPopup(base_provider).then(function(result) {
+                console.log(result)
+                console.log("Success")
+            }).catch(function(err){
+                console.log(err)
+                console.log("Failed")
+            })
+        }
+    </script>
+</body>
+
+</html>

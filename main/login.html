@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Login</title>
+ 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="555022717847-grkn9j3dj728bml55268o360ce2209c8.apps.googleusercontent.com">
+</head>
+
+<body>
+    <h1>
+        Welcome to ClassRPG!
+    </h1>
+<!--
+    <button onclick="googleSignIn()">Sign in as a Student</button><br><br>
+    <button><a href=home-teacher.html>Sign in as a Teacher</a></button><br><br>
+-->
+
+<p>Sign in as Student:</p>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<br> <br>
+<p>Sign in as Teacher:</p>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+
+    <script>
+        var config = {
+            apiKey: "AIzaSyCRNtGaHVfkfU6JwZj9BBSYfUpSXRJ0lIk",
+            authDomain: "classrpg-2ac09.firebaseapp.com",
+            databaseURL: "https://classrpg-2ac09.firebaseio.com",
+            projectId: "classrpg-2ac09",
+            storageBucket: "",
+            messagingSenderId: "265529658530",
+            appId: "1:265529658530:web:213f9c11a2a57002"
+        };
+        firebase.initializeApp(config);
+
+        function onSignIn(googleUser) {
+
+        var profile = googleUser.getBasicProfile();
+        
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+        
+};
+
+    </script>
+    </body>
+
+</html>

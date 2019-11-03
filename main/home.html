@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Home</title>
+</head>
+
+<body>
+    <button><a href="home.html">Home</a></button>
+    <button><a href="profile.html">My Profile</a></button>
+    <button><a href="login.html">Sign Out</a></button>
+
+    <h1>Home - Student </h1>
+
+    <h1>Greetings, "name" !</h1>
+
+    <h2>My Guild Missions</h2>
+    <button><a href="guild-mission.html">Subject</a></button>
+    <button>Subject 2</button>
+
+    <h2>Add Guild Mission</h2>
+    Enter Access Key: <input type="text"></input>
+    <button onclick="submit()">Submit</button>
+
+    <br> <br> <br> <br>
+    <h1>Home - Teacher </h1>
+
+    <h1>Greetings, "name" !</h1>
+
+    <button onclick="addGuildMission()">Add Guild Mission</button>
+    <p id="addGuildMission">
+        Name: <input type="text">
+        <button onclick="submit2()">Submit</button>
+
+    </p>
+    <h2>My Guild Missions</h2>
+    <button><a href="guild-mission-teacher.html">Subject</a></button>
+    <button>Subject 2</button>
+
+
+    <script>
+
+        function submit() {
+            window.alert("Guild Mission Added Successfully!");
+        }
+
+        document.getElementById("addGuildMission").style.display = "none";
+
+        function addGuildMission() {
+            var x = document.getElementById("addGuildMission");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        document.getElementById("view-mission").style.display = "none";
+
+
+        function submit2() {
+            window.alert("Guild Mission added successfully! \nAccess code is: ");
+        }
+    </script>
+
+</body>
+
+</html>

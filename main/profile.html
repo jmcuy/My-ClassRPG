@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ClassRPG | My Profile</title>
+</head>
+
+<body>
+  <button><a href="home.html">Home</a></button>
+  <button><a href="profile.html">My Profile</a></button>
+  <button><a href="login.html">Sign Out</a></button>
+
+  <h1>My Profile</h1>
+  Avatar <br>
+  Full name <br>
+  Course <br>
+  Department <br>
+  SAIS ID <br>
+  Email <br> <br>
+
+  <button onclick="editProfile()">Edit Profile</button>
+
+  <div id="profile-form">
+    <h2>Edit Profile</h2>
+    Avatar: <br>
+    Full Name: <input type="text"></input> <br>
+    Course: <input type="text"></input> <br>
+    Department: <input type="text"></input> <br>
+    SAIS ID: <input type="text"></input> <br> <br>
+
+    <button onclick="submit()">Submit</button>
+  </div>
+
+  <script>
+
+    function submit() {
+      window.alert("Form Submitted!");
+    }
+
+
+    document.getElementById("profile-form").style.display = "none";
+
+    function editProfile() {
+      var x = document.getElementById("profile-form");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

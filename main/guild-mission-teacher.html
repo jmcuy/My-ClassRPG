@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Guild Mission</title>
+</head>
+
+<body>
+    <button><a href="home.html">Home</a></button>
+    <button><a href="profile.html">My Profile</a></button>
+    <button><a href="login.html">Sign Out</a></button> <br><br>
+
+    <h2>Guild Mission (Course Code)</h2>
+
+    <button onclick="viewAccessKey()">View Access Key</button>
+    <p id="access-key">12345</p>
+    <button><a href="add-guild-activity.html">Add Guild Activity</a></button>
+    <button><a href="participants.html">See Enrolled Participants</a></button>
+
+    <h4>Quizzes</h4>
+    <button onclick="viewMission()">Quiz #1</button>
+    <div id="view-mission">
+        Date: <br>
+        Topic: <br>
+        Subtopic 1 <input type="text" disabled value="XP"></input> <br>
+        Subtopic 2 <input type="text" disabled value="XP"></input> <br>
+        Subtopic 3 <input type="text" disabled value="XP"></input> <br>
+
+        Total XP: <br> <br>
+
+        <button><a href="input-xp.html">Input XP</a></button>
+        <button><a href="view-records.html">See Records</a></button>
+
+    </div>
+
+    <h4>Lab Activities</h4>
+
+    <h4>Exams</h4>
+
+    <script>
+        document.getElementById("access-key").style.display = "none";
+
+        function viewAccessKey() {
+            var x = document.getElementById("access-key");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        document.getElementById("view-mission").style.display = "none";
+
+        function viewMission() {
+            var x = document.getElementById("view-mission");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

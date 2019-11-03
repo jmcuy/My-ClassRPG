@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Add Guild Activity</title>
+</head>
+
+<body>
+    <button><a href="home.html">Home</a></button>
+    <button><a href="profile.html">My Profile</a></button>
+    <button><a href="login.html">Sign Out</a></button><br><br>
+
+    <h2>Guild Mission (Course Code)</h2>
+    <h2>Add Guild Activity</h2>
+    
+    <button onclick="submit()">Submit</button>
+    <button><a href="guild-mission-teacher.html"> Cancel</a></button>  <br> <br>
+
+    Guild Activity Name: <input type="text"> <br><br>
+    Date: <input type="text"> <br><br>
+    Type:
+    <select>
+        <option value="quiz">Quiz</option>
+        <option value="lab-activity">Lab Activity</option>
+        <option value="exam">Exam</option>
+    </select> <br> <br>
+
+    Sub-topic:
+    <button onclick="addSubTopic()">Add Sub-topic</button> <br>
+
+
+    <br>
+
+    <script>
+
+        function submit(){
+            window.alert("Form Submitted!");
+        }
+        
+        function addSubTopic() {
+
+            var label = document.createElement("span");
+            label.appendChild(document.createTextNode("Title: "));
+            document.body.appendChild(label);
+
+            var x = document.createElement("input");
+            x.setAttribute("type", "text");
+            document.body.appendChild(x);
+
+            var y = document.createElement("br");
+            document.body.appendChild(y);
+
+            var label2 = document.createElement("span");
+            label2.appendChild(document.createTextNode(" Perfect Score: "));
+            document.body.appendChild(label2);
+
+            var z = document.createElement("input");
+            z.setAttribute("type", "text");
+            document.body.appendChild(z);
+
+            document.body.appendChild(y);
+
+
+        }
+    </script>
+
+</body>
+
+</html>

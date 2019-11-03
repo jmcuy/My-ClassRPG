@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ClassRPG | My Profile</title>
+</head>
+
+<body>
+  <button><a href="home.html">Home</a></button>
+  <button><a href="profile.html">My Profile</a></button>
+  <button><a href="login.html">Sign Out</a></button>
+
+  <h1>My Profile</h1>
+  <div class="prof-container">
+      <!-- Avatar <br>
+      Full name <br>
+      Course <br>
+      Department <br>
+      SAIS ID <br>
+      Email <br> <br> -->
+  </div>
+
+
+  <button onclick="editProfile()">Edit Profile</button>
+
+  <div id="profile-form">
+    <h2>Edit Profile</h2>
+    Avatar: <br>
+    Full Name: <input type="text" id="fname"></input> <br>
+    Course: <input type="text" id="course"></input> <br>
+    Department: <input type="text" id="department"></input> <br>
+    SAIS ID: <input type="text" id="sais"></input> <br> <br>
+    
+    <button onclick="submit()">Submit</button>
+  </div>
+
+    
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+  <script src="js/firebase-connect.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>
