@@ -4,5 +4,5 @@ node_js: '12'
 
 jobs:
   include:
-    - script: npm start prototype/test
+    - script: mocha prototype/test
      
