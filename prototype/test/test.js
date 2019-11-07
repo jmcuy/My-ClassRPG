@@ -20,7 +20,7 @@ describe('Boolean', function() {  //BTW UNCOMMENT OUT GUILD_REF, IT CAUSES MOCHA
   describe('#Adding Subjects', function() {
     it('check if data is inside database', function() {
         let p = app.addSubject_test(guilds_ref,"cmsc123"); //calls the addSubject func
-        assert.equal(p, false);  //compares the result, and done
+        assert.equal(w, false);  //compares the result, and done
         // assert.equal(p, true); //CMSC11  == TRUE 
     });
   });
