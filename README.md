@@ -25,3 +25,6 @@ Added Mocha for unit testing<br>
 -Added js to home-teacher + home-student + profile<br>
 -Modified firebase-connect.js
 -added static unit testing using Mocha
+
+<h1>Update: (11/07/19)
+-added TravisCI
