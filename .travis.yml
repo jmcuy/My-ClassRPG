@@ -9,6 +9,7 @@ jobs:
 notifications:
   email:
     recipients:
+    - jcuy3@up.edu.ph
     - thegirlwholovesthesky@gmail.com
     on_success: always
     on_failure: always
