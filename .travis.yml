@@ -5,4 +5,10 @@ node_js: '12'
 jobs:
   include:
     - script: mocha prototype/test
-     
+
+notifications:
+  email:
+    recipients:
+    - thegirlwholovesthesky@gmail.com
+    on_success: always
+    on_failure: always
