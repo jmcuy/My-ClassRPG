@@ -1,6 +1,6 @@
 exports.validation = function(guild_ref,key){
     for(let i = 0; i < guild_ref.keys.length;i++){
-        if(guild_ref.keys[] == key){
+        if(guild_ref.keys[i] == key){
             return true
         }
     }
