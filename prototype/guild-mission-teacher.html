@@ -13,15 +13,40 @@
     <button><a href="profile-teacher.html">My Profile</a></button>
     <button><a href="login.html">Sign Out</a></button> <br><br>
 
-    <h2>Guild Mission (Course Code)</h2>
+    <h2 id="course-code">Guild Mission (Course Code)</h2>
 
     <button onclick="viewAccessKey()">View Access Key</button>
     <p id="access-key">12345</p>
     <button><a href="add-guild-activity.html">Add Guild Activity</a></button>
-    <button><a href="participants.html">See Enrolled Participants</a></button>
+    <button onclick="view_participants()">See Enrolled Participants</button>
 
-    <h4>Quizzes</h4>
-    <button onclick="viewMission()">Quiz #1</button>
+    <br><br><button onclick="expand()">Add Activities</button><br>
+    <div id="add_quiz" style="display:none">
+        <br>
+        Title: <input type="text" id="qtitle"></input><br>
+        Date: <input type="text" id="date"></input><br>
+        Type:
+        <select id="activity_type"> 
+            <option value="quiz" selected="">Quiz</option>
+            <option value="lab-activity">Lab Activity</option>
+            <option value="exam">Exam</option>
+        </select> 
+        <br><br>
+        <lu>
+            Subtopic : <input type="text" placeholder="enter topic name" id="subtopic"></input>
+            Total:  <input type="number"  id="total_num" value="0"></input>
+            <button onclick="addSubs()">Add</button>
+        </lu>
+        <br><button onclick="addActivity()">Submit</button><hr>
+        <div class="subs_list" id="subs_container">
+            <div>Added Topics</div><br>
+            none..
+        </div>
+    </div><hr>
+    <div id="quiz">
+        <h4>Quizzes</h4>
+        <button onclick="viewMission()">Quiz #1</button>
+    </div>
     <div id="view-mission">
         Date: <br>
         Topic: <br>
@@ -35,35 +60,23 @@
         <button><a href="view-records.html">See Records</a></button>
 
     </div>
+    <div id="labs">
+        <h4>Lab Activities</h4>
+    </div>
+    <div id="lab-view"></div>
+    <div id="exams">
+        <h4>Exams</h4>
+    </div>
+    <div id="exam-view"></div>
+    
 
-    <h4>Lab Activities</h4>
+    
 
-    <h4>Exams</h4>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
 
-    <script>
-        document.getElementById("access-key").style.display = "none";
-
-        function viewAccessKey() {
-            var x = document.getElementById("access-key");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-
-        document.getElementById("view-mission").style.display = "none";
-
-        function viewMission() {
-            var x = document.getElementById("view-mission");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-
-    </script>
+    <script src="js/firebase-connect.js"></script>
+    <script src="js/guild-teacher.js"></script>
 </body>
 
 </html>

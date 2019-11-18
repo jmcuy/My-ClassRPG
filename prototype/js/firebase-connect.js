@@ -13,9 +13,12 @@ firebase.initializeApp(firebaseConfig);
 
 let db = firebase.database();
 let quiz_ref = db.ref("Quizzes");
+let lab_ref = db.ref("Labs");
+let exam_ref = db.ref("Exams");
 let guild_ref = db.ref("Guilds");
-let user_ref = db.ref("Users")
-let enrolled_ref = db.ref("Enrolled_Students")
+let user_ref = db.ref("Users");
+let enrolled_ref = db.ref("Enrolled_Students");
+let scores_ref = db.ref("Scores");
 let user_token = "id1" //aka the current logged in user
 
 
@@ -61,3 +64,14 @@ enrolled_ref.once("value", function(snapshot){
     });
     dispSubject() //ONLY FOR home-student
 });
+
+
+//////////////////////////////////////////
+/////////////FOOTNOTES//////////////////////
+//FIREBASE FUNCTION "ERRORS" CAN BE FIXED BY PUTTING THE
+//INDIVIDUAL FIREBASE REF IN THE SPECIFIC JS FILE
+// EXAMPLE//
+// enrolled_ref.once("value", function(snapshot){
+//     dispSubject() //ONLY FOR home-student
+// });
+////////////IM LAZY SO IMA HEAD OUT//////////////

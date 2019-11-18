@@ -13,31 +13,39 @@
     <button><a href="profile-teacher.html">My Profile</a></button>
     <button><a href="login.html">Sign Out</a></button>
 
-    <h2>Guild Mission (Subject Code)</h2>
+    <h2 id="subject-code">Guild Mission (Subject Code)</h2>
     <h3>Guild Activity Name</h3>
     <h4>Total XP: XP</h4>
 
-   Select Participant: 
-   <select>
+
+   <div id="selector">
+        Select Participant: 
+    <!-- <select id="participant-list">
         <option>Participant 1</option>
         <option>Participant 2</option>
         <option>Participant 3</option>
         <option>Participant 4</option>
-      </select> <br><br>
+    </select> <br><br> -->
+   </div><br>
+   
+   <div id="input-subs">
+        <!-- Sub-Topic 1 XP: <input type="text"></input> <br> 
+        Sub-Topic 2 XP: <input type="text"></input> <br> 
+        Sub-Topic 3 XP: <input type="text"></input> <br> <br>
 
-      Sub-Topic 1 XP: <input type="text"></input> <br> 
-      Sub-Topic 2 XP: <input type="text"></input> <br> 
-      Sub-Topic 3 XP: <input type="text"></input> <br> <br>
-
-      Total Gained XP: <br> <br>
+        Total Gained XP: <br> <br> -->
+      
+   </div><br>
       
     <button onclick="submit()">Submit</button>
-    <button><a href="guild-mission-teacher.html">Back</a></button>
-<script>
-    function submit(){
-        window.alert("XP added successfully!");
-    }
-</script>
+    <!-- <button><a href="guild-mission-teacher.html">Back</a></button> -->
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+
+    <script src="js/firebase-connect.js"></script>
+    <!-- <script src="js/participants.js"></script> -->
+    <script src="js/input.js"></script>
 </body>
 
 </html>

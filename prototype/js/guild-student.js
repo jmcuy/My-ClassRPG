@@ -55,3 +55,7 @@ function dispSubject(){ //displays enrolled subjects
     
    
 }
+
+//////////////FOOTNOTES//////////////////////////
+///ADD TOTAL XP IN THE DATABASE (for each users)
+//////ALRYT IMA HEAD OUT/////////////////////////

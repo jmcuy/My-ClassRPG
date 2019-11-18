@@ -28,3 +28,10 @@ Added Mocha for unit testing<br>
 
 <h1>Update: (11/07/19)
 -added TravisCI
+
+<h1>Update: (18/11/19)
+-added view participants
+- fixed guild-teacher.html
+- fixed input-xp (havent added to database yet)
+- Added guild-teacher.js
+- Added input.js
