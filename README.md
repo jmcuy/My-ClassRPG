@@ -35,3 +35,8 @@ Added Mocha for unit testing<br>
 - fixed input-xp (havent added to database yet)
 - Added guild-teacher.js
 - Added input.js
+
+<h1>Update: (20/11/19)
+-added record.js
+-missing *input checker (if num or string)
+-fixed view-record.html
