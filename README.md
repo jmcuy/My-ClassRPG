@@ -40,3 +40,7 @@ Added Mocha for unit testing<br>
 - added record.js<br>
 - missing *input checker (if num or string)<br>
 - fixed view-record.html<br>
+
+<h1>Update: (20/11/19)</h1>
+- added student-view.js<br>
+- fixed guild-mission.html
