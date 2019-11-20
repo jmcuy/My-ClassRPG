@@ -13,26 +13,39 @@
     <button><a href="profile-teacher.html">My Profile</a></button>
     <button><a href="login.html">Sign Out</a></button>
 
-    <h2>Guild Mission (Subject Code)</h2>
+    <h2 id="subject-code">Guild Mission (Subject Code)</h2>
     <h3>Guild Activity Name</h3>
     <h4>Total XP: XP</h4>
 
-   Select Participant: 
-   <select>
-        <option>Participant 1</option>
-        <option>Participant 2</option>
-        <option>Participant 3</option>
-        <option>Participant 4</option>
-      </select> <br><br>
+    <div id="selector">
+          Select Participant: 
+      <!-- <select id="participant-list">
+          <option>Participant 1</option>
+          <option>Participant 2</option>
+          <option>Participant 3</option>
+          <option>Participant 4</option>
+      </select> <br><br> -->
+        <select id="participant-list">
+            <option id="def" value="" selected>none</option>
+        </select>
+    </div><br>
 
-      Sub-Topic 1 XP: XP <br>
+      <!-- Sub-Topic 1 XP: XP <br>
       Sub-Topic 2 XP: XP <br>
-      Sub-Topic 3 XP: XP <br> <br>
-
-      Total Gained XP: <br> <br>
+      Sub-Topic 3 XP: XP <br> <br> -->
+    <div id="input-subs">
+      NOTHING YET
+    </div><br>
+    
+    <div id="total">Total Gained XP: </div><br> <br>
       
     <button><a href="guild-mission-teacher.html">Back</a></button>
+      
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
 
+    <script src="js/firebase-connect.js"></script>
+    <script src="js/records.js"></script>
 </body>
 
 </html>
