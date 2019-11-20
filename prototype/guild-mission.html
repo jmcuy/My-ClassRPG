@@ -13,12 +13,15 @@
     <button><a href="profile-student.html">My Profile</a></button>
     <button><a href="login.html">Sign Out</a></button> <br><br>
 
-    <h2>Guild Mission (Course Code)</h2>
+    <h2 id="course-code">Guild Mission (Course Code)</h2>
 
     <h3>Current Level</h3>
-    Current XP:
-    <h4>Quizzes</h4>
-    <button onclick="viewMission()">Quiz #1</button>
+    <h3 id="CXP">Current XP: </h3>
+    <div id="quiz">
+        <h4>Quizzes</h4>
+        nothing yet..
+        <!-- <button onclick="viewMission()">Quiz #1</button> -->
+    </div>
     <div id="view-mission">
         Date: <br>
         Topic: <br>
@@ -30,23 +33,26 @@
         Topic Total XP: <br> <br>
 
     </div>
+    <div id="labs">
+        <h4>Lab Activities</h4>
+        nothing yet..
+    </div>
+    <div id="lab-view">
+    </div>
+    <div id="exams">
+        <h4>Exams</h4>
+        nothing yet..
+    </div>
+    <div id="exam-view"></div>
+    <!-- <h4>Lab Activities</h4>
 
-    <h4>Lab Activities</h4>
+    <h4>Exams</h4> -->
 
-    <h4>Exams</h4>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
 
-    <script>
-        document.getElementById("view-mission").style.display = "none";
-
-        function viewMission() {
-            var x = document.getElementById("view-mission");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+    <script src="js/firebase-connect.js"></script>
+    <script src="js/student-view.js"></script>
 </body>
 
 </html>
