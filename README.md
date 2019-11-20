@@ -26,17 +26,17 @@ Added Mocha for unit testing<br>
 -Modified firebase-connect.js
 -added static unit testing using Mocha
 
-<h1>Update: (11/07/19)
+<h1>Update: (11/07/19)</h1>
 -added TravisCI
 
-<h1>Update: (18/11/19)
--added view participants
-- fixed guild-teacher.html
-- fixed input-xp (havent added to database yet)
-- Added guild-teacher.js
+<h1>Update: (18/11/19)</h1>
+- added view participants<br>
+- fixed guild-teacher.html<br>
+- fixed input-xp (havent added to database yet)<br>
+- Added guild-teacher.js<br>
 - Added input.js
 
-<h1>Update: (20/11/19)
--added record.js
--missing *input checker (if num or string)
--fixed view-record.html
+<h1>Update: (20/11/19)</h1>
+- added record.js<br>
+- missing *input checker (if num or string)<br>
+- fixed view-record.html<br>
