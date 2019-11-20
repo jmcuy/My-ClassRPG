@@ -55,8 +55,8 @@ function add_user_to_list(id){
   //selected id
  
 let options = document.getElementById("participant-list");
-let participant = null;
-let sub_parent = document.getElementById("input-subs")
+// let participant = null;
+let sub_parent = document.getElementById("input-subs");
 options.addEventListener("change",function(){
     document.getElementById("def").style = "display:none"
     participant = options[options.selectedIndex].value;    
@@ -70,11 +70,10 @@ options.addEventListener("change",function(){
             if(childsnapshot.key == participant){
                 childsnapshot.forEach(function(childe){
                     if(childe.key.toLowerCase().includes(mission_type)){
-                
                         childe.forEach(function(childs){
-
-                            let topics = document.createElement("div");
-                            childs.child("Subtopics").forEach(function(childes){
+                            if(childs.key == act_id){
+                                let topics = document.createElement("div");
+                                childs.child("Subtopics").forEach(function(childes){
                     
                                 sub_parent.innerHTML +=  childes.key + "  ";
                                 topics.id = childes.key;
@@ -84,6 +83,8 @@ options.addEventListener("change",function(){
 
                                 total_score +=  parseInt(childes.child("xp").val());
                             });
+                            }
+                            
                         });
                     }
                 });

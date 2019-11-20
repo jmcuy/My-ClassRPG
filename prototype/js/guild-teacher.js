@@ -124,7 +124,7 @@ function showAct(act_id, container_id, subtopics, date, act_name){
             location.href = "input-xp.html?type=quiz?/id="+ act_id+ "?/" + guild_key;
         } else {
             location.href = "input-xp.html?type=" + container_id.substr(0,container_id.lastIndexOf("-"))
-             + "?/"+ guild_key;
+             + "?/id="+ act_id + "?/"+ guild_key;
         }
         
         // location.href = "input-xp.html?/" + guild_key;
@@ -134,8 +134,8 @@ function showAct(act_id, container_id, subtopics, date, act_name){
         if(container_id == "view-mission"){
             location.href = "view-records.html?type=quiz?/id="+ act_id+ "?/" + guild_key;
         } else {
-            location.href = "view-records.html?type=" + container_id.substr(0,container_id.lastIndexOf("-"))
-             + "?/"+ guild_key;
+            location.href = "view-records.html?type="+ container_id.substr(0,container_id.lastIndexOf("-"))
+            + "?/id="+ act_id + "?/"+ guild_key;
         }
         
     });

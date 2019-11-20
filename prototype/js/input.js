@@ -63,6 +63,44 @@ quiz_ref.once("value", function(snapshot){
         }
     });
 });
+
+lab_ref.once("value", function(snapshot){
+    let sub_parent = document.getElementById("input-subs")
+    snapshot.forEach(function(childsnapshot){
+        if(childsnapshot.key == subject_key){
+            childsnapshot.forEach(function(childe){
+                if(childe.key == act_id){
+                    let topics = document.createElement("input");
+                    childe.child("SubTopics").forEach(function(childes){
+                        sub_parent.innerHTML +=  childes.key + "  ";
+                        topics.id = childes.key;
+                        sub_parent.appendChild(topics);
+                        sub_parent.innerHTML += "<br>"
+                    });
+                }
+            });
+        }
+    });
+});
+
+exam_ref.once("value", function(snapshot){
+    let sub_parent = document.getElementById("input-subs")
+    snapshot.forEach(function(childsnapshot){
+        if(childsnapshot.key == subject_key){
+            childsnapshot.forEach(function(childe){
+                if(childe.key == act_id){
+                    let topics = document.createElement("input");
+                    childe.child("SubTopics").forEach(function(childes){
+                        sub_parent.innerHTML +=  childes.key + "  ";
+                        topics.id = childes.key;
+                        sub_parent.appendChild(topics);
+                        sub_parent.innerHTML += "<br>"
+                    });
+                }
+            });
+        }
+    });
+});
 let participant_list = new Array();
 
 function add_user_to_list(id){
@@ -85,6 +123,16 @@ function submit(){
     for(let i = 0; i < subnames.length; i++){
         if(mission_type == "quiz"){
             scores_ref.child(participant).child("Quizzes").child(act_id)
+            .child("Subtopics").child(subnames[i].id).update({
+                xp: subnames[i].xp
+            });
+        } else if ( mission_type == "lab"){
+            scores_ref.child(participant).child("Labs").child(act_id)
+            .child("Subtopics").child(subnames[i].id).update({
+                xp: subnames[i].xp
+            });
+        } else {
+            scores_ref.child(participant).child("Exams").child(act_id)
             .child("Subtopics").child(subnames[i].id).update({
                 xp: subnames[i].xp
             });
