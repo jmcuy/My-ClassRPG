@@ -1,7 +1,7 @@
 
 // document.getElementById("access-key").style.display = "none";
 let start = location.href.lastIndexOf("/");
-let guild_course = location.href.substr(start + 1).replace("%", " ");
+let guild_course = location.href.substr(start + 1).replace(/[%]/g, " ");
 let guild_key = guild_course.replace(/\s+/g, "").toLowerCase() + "id";
 
 document.getElementById("course-code").innerHTML = "Guild Mission " + guild_course;
