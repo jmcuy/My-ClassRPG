@@ -132,7 +132,7 @@ function showAct(act_id, container_id, subtopics, date, act_name){
     record.innerHTML = "See Records";
     record.addEventListener("click",function(){
         if(container_id == "view-mission"){
-            location.href = "view-records.html?type=quiz?/id="+ act_id+ "?/" + guild_key;
+            location.href = "view-records.html?type=quiz?/id="+ act_id + "?/" + guild_key;
         } else {
             location.href = "view-records.html?type="+ container_id.substr(0,container_id.lastIndexOf("-"))
             + "?/id="+ act_id + "?/"+ guild_key;
@@ -192,10 +192,7 @@ function addActivity(){ //must assum that quiz id is randomized
     let date = document.getElementById("date").value;
     let name = document.getElementById("qtitle").value;
     //THIS NEEDS TO BE CHANGED INTO RANDOM
-  
-    let act_key = name.replace(" ", "") + "id";
-    console.log(name)
-
+    let act_key = name.replace(/\s+/g, "")  + "id";
     if(name !== "" && subs_list.length > 0){
         // alert(JSON.stringify(subs_list).toString())
         if(gtype == "quiz"){
